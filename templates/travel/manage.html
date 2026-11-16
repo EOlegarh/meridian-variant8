@@ -1,0 +1,1 @@
+{% extends 'account_base.html' %}{% block workspace %}<dl class="stats"><div><dt>Бронирований</dt><dd>{{ totals.count }}</dd></div><div><dt>Туристов</dt><dd>{{ totals.seats }}</dd></div><div><dt>Внесено</dt><dd>{{ totals.paid|floatformat:0 }} ₽</dd></div></dl><h2>Последние заявки</h2>{% include 'includes/bookings_list.html' with staff=True %}{% endblock %}
