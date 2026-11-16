@@ -1,0 +1,35 @@
+ПРОЕКТ БАЗЫ ДАННЫХ · ВАРИАНТ 8 · ЗАНЯТИЕ 5
+
+Обычный Python 3.11+:
+  cd проект
+  python -m venv .venv
+  source .venv/bin/activate
+  pip install -r requirements.txt
+  python manage.py migrate
+  python manage.py runserver --insecure
+
+На NixOS:
+  cd проект
+  nix-shell --run 'python manage.py runserver --insecure'
+
+Админка: http://127.0.0.1:8000/admin/
+В поставляемой демонстрационной базе:
+  admin / DemoTravel8!2026
+  tourist01 … tourist12 / DemoTravel8!2026
+Эти реквизиты предназначены только для локальной демонстрации.
+Manager — служебный аккаунт без выданных прав редактирования справочников.
+
+В базе уже 36 бронирований. seed_demo запускайте только для новой пустой базы:
+  python manage.py migrate
+  python manage.py seed_demo
+Повторное заполнение непустой базы отклоняется.
+TRAVEL_DB задаёт путь новой SQLite; DJANGO_SECRET_KEY задаёт ключ развёртывания.
+В поставке DEBUG=False; --insecure нужен только для локальной раздачи CSS админки.
+Публичные представления и формы будут реализованы в следующих занятиях.
+
+Проверки:
+  python manage.py test travel
+  python manage.py makemigrations --check --dry-run
+
+Работа с данными выполняется через ORM; reserve, quote, record_payment, cancel — в travel/services.py.
+Почтовый backend — консольный. В production нужен отдельный секрет и обычная конфигурация статических файлов/HTTPS.

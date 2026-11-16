@@ -1,0 +1,12 @@
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.sqlite3
+media/
+staticfiles/
+__pycache__/
+*.pyc
+node_modules/
+evidence/*progress*.jsonl
