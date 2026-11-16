@@ -1,0 +1,23 @@
+[
+  {
+    "file": "altai.webp",
+    "width": 1280,
+    "height": 854,
+    "bytes": 291234,
+    "sourceBytes": 384825
+  },
+  {
+    "file": "karelia.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 351384,
+    "sourceBytes": 440319
+  },
+  {
+    "file": "istanbul.webp",
+    "width": 1280,
+    "height": 960,
+    "bytes": 176704,
+    "sourceBytes": 278309
+  }
+]
