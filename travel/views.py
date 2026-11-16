@@ -5,16 +5,10 @@ from .models import Tour
 def home(request):
     tours=Tour.objects.filter(published=True).select_related('hotel__direction')
     featured=tours.filter(hotel__direction__name='Алтай').first()
-    return render(request,'travel/home.html',{'featured':featured,'departure':featured.departures.filter(start_date__gt=date.today()).first(),'istanbul':tours.filter(hotel__direction__name='Стамбул').first(),'karelia':tours.filter(hotel__direction__name='Карелия').first()})
-
-def page(request, **kwargs):return render(request,'travel/page.html',{'title':'Места и маршруты'})
-
+    return render(request,'travel/home.html',{'featured':featured,'departure':featured.departures.filter(start_date__gt=date.today()).first() if featured else None,'istanbul':tours.filter(hotel__direction__name='Стамбул').first(),'karelia':tours.filter(hotel__direction__name='Карелия').first()})
 
 def faq(request):
     return render(request,'travel/faq.html',{'title':'Как устроено путешествие'})
-
-def contacts(request):
-    return render(request,'travel/page.html',{'title':'На связи перед дорогой','text':'Меридиан. Учебное турагентство. Вопросы о заезде, составе группы и дополнительных услугах можно отправить через форму обратной связи. Контактный адрес: demo@localhost.'})
 
 from django.shortcuts import get_object_or_404
 from django.db.models import Q,Min,Prefetch,OuterRef,Exists
@@ -134,6 +128,8 @@ from django.core.exceptions import ValidationError
 from django.core.mail import send_mail
 from django.db.models.deletion import ProtectedError
 from django.http import HttpResponse,JsonResponse
+from django.conf import settings
+import json
 from django.views.decorators.http import require_POST
 from .forms import RegisterForm,ProfileForm,ContactForm,TouristFormSet,BookingForm,PaymentForm,ReviewForm,TourForm,DepartureForm
 from .services import reserve,update_booking,cancel,record_payment,quote
@@ -164,7 +160,7 @@ def contacts(request):
         d=form.cleaned_data
         send_mail('Вопрос о путешествии',f"{d['name']} / {d['email']} / {d['phone']}\n{d['text']}",'demo@localhost',['manager@example.test'])
         messages.success(request,'Сообщение передано менеджеру через почтовый модуль. В учебном режиме письмо выводится в консоль сервера.');return redirect('travel:contacts')
-    return render(request,'travel/form.html',{'title':'На связи перед дорогой','intro':'Меридиан · Учебное турагентство. Расскажите, куда хотите поехать, или задайте вопрос о бронировании.','form':form,'submit':'Отправить вопрос'})
+    return render(request,'travel/form.html',{'title':'На связи перед дорогой','intro':'Меридиан · Учебное турагентство. Расскажите, куда хотите поехать, или задайте вопрос о бронировании.','form':form,'submit':'Отправить вопрос','credits':json.loads((settings.BASE_DIR/'static/images/sources.json').read_text())})
 
 def tourists_from(formset):return [dict(full_name=f.cleaned_data['full_name'],birth_date=f.cleaned_data['birth_date']) for f in formset if f.cleaned_data and not f.cleaned_data.get('DELETE')]
 

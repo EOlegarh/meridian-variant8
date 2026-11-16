@@ -8,6 +8,7 @@ class SearchForm(forms.Form):
     nights=forms.IntegerField(label='Не больше ночей',required=False,min_value=1,max_value=30)
 
 from datetime import date
+from decimal import Decimal
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
 from django.core.validators import RegexValidator
@@ -51,7 +52,7 @@ class BookingForm(forms.Form):
         super().__init__(*args,**kwargs)
         self.fields['services'].queryset=departure.tour.services.all()
 class PaymentForm(forms.Form):
-    amount=forms.DecimalField(label='Сумма, ₽',min_value='.01',max_digits=12,decimal_places=2)
+    amount=forms.DecimalField(label='Сумма, ₽',min_value=Decimal('.01'),max_digits=12,decimal_places=2)
     reference=forms.CharField(label='Идентификатор платежа',max_length=100,help_text='Уникальный номер учебного платежа. Повторная отправка с тем же номером не спишет сумму дважды.')
 class ReviewForm(forms.ModelForm):
     class Meta:model=Review;fields=['rating','text','image'];widgets={'text':forms.Textarea(attrs={'rows':5,'maxlength':3000})}

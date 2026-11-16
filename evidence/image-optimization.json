@@ -19,5 +19,12 @@
     "height": 960,
     "bytes": 176704,
     "sourceBytes": 278309
+  },
+  {
+    "file": "altai-768.webp",
+    "width": 768,
+    "height": 512,
+    "bytes": 71408,
+    "sourceBytes": 384825
   }
 ]

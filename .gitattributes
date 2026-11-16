@@ -1,0 +1,2 @@
+evidence/lighthouse/*.html -whitespace
+evidence/validators/*.json -whitespace

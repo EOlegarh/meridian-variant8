@@ -1,0 +1,212 @@
+[
+  {
+    "key": "home",
+    "url": "/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "tours",
+    "url": "/tours/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "directions",
+    "url": "/directions/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "faq",
+    "url": "/help/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "contacts",
+    "url": "/contacts/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "login",
+    "url": "/accounts/login/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "register",
+    "url": "/accounts/register/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "search",
+    "url": "/search/?q=Алтай",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "tour",
+    "url": "/tours/tour-1/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "direction",
+    "url": "/directions/1/",
+    "role": null,
+    "status": 200
+  },
+  {
+    "key": "dashboard",
+    "url": "/account/",
+    "role": "tourist01",
+    "status": 200
+  },
+  {
+    "key": "bookings",
+    "url": "/bookings/",
+    "role": "tourist01",
+    "status": 200
+  },
+  {
+    "key": "profile",
+    "url": "/account/profile/",
+    "role": "tourist01",
+    "status": 200
+  },
+  {
+    "key": "password",
+    "url": "/accounts/password_change/",
+    "role": "tourist01",
+    "status": 200
+  },
+  {
+    "key": "booking_new",
+    "url": "/bookings/new/1/",
+    "role": "tourist01",
+    "status": 200
+  },
+  {
+    "key": "booking",
+    "url": "/bookings/22/",
+    "role": "tourist10",
+    "status": 200
+  },
+  {
+    "key": "booking_edit",
+    "url": "/bookings/22/edit/",
+    "role": "tourist10",
+    "status": 200
+  },
+  {
+    "key": "booking_cancel",
+    "url": "/bookings/22/cancel/",
+    "role": "tourist10",
+    "status": 200
+  },
+  {
+    "key": "booking_print",
+    "url": "/bookings/22/print/",
+    "role": "tourist10",
+    "status": 200
+  },
+  {
+    "key": "payment",
+    "url": "/bookings/24/payment/",
+    "role": "tourist12",
+    "status": 200
+  },
+  {
+    "key": "review",
+    "url": "/bookings/36/review/",
+    "role": "tourist12",
+    "status": 200
+  },
+  {
+    "key": "manage",
+    "url": "/manage/",
+    "role": "manager",
+    "status": 200
+  },
+  {
+    "key": "manage_bookings",
+    "url": "/manage/bookings/",
+    "role": "manager",
+    "status": 200
+  },
+  {
+    "key": "departures",
+    "url": "/manage/departures/",
+    "role": "manager",
+    "status": 200
+  },
+  {
+    "key": "analytics",
+    "url": "/manage/analytics/",
+    "role": "manager",
+    "status": 200
+  },
+  {
+    "key": "manage_booking",
+    "url": "/manage/bookings/22/",
+    "role": "manager",
+    "status": 200
+  },
+  {
+    "key": "admin",
+    "url": "/staff/tours/",
+    "role": "admin",
+    "status": 200
+  },
+  {
+    "key": "tour_new",
+    "url": "/staff/tours/new/",
+    "role": "admin",
+    "status": 200
+  },
+  {
+    "key": "tour_edit",
+    "url": "/staff/tours/1/edit/",
+    "role": "admin",
+    "status": 200
+  },
+  {
+    "key": "tour_delete",
+    "url": "/staff/tours/1/delete/",
+    "role": "admin",
+    "status": 200
+  },
+  {
+    "key": "departure_new",
+    "url": "/staff/departures/new/",
+    "role": "admin",
+    "status": 200
+  },
+  {
+    "key": "departure_edit",
+    "url": "/staff/departures/1/edit/",
+    "role": "admin",
+    "status": 200
+  },
+  {
+    "key": "departure_delete",
+    "url": "/staff/departures/1/delete/",
+    "role": "admin",
+    "status": 200
+  },
+  {
+    "key": "error404",
+    "url": "/missing-page/",
+    "role": null,
+    "status": 404
+  },
+  {
+    "key": "error403",
+    "url": "/manage/",
+    "role": "tourist01",
+    "status": 403
+  }
+]

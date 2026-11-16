@@ -1,0 +1,177 @@
+[
+  {
+    "page": "admin",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "analytics",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "booking",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "booking_cancel",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "booking_edit",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "booking_new",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "booking_print",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "bookings",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "contacts",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "dashboard",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "departure_delete",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "departure_edit",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "departure_new",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "departures",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "direction",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "directions",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "error403",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "error404",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "faq",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "home",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "login",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "manage",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "manage_booking",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "manage_bookings",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "password",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "payment",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "profile",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "register",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "review",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "search",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "tour",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "tour_delete",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "tour_edit",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "tour_new",
+    "errors": 0,
+    "messages": []
+  },
+  {
+    "page": "tours",
+    "errors": 0,
+    "messages": []
+  }
+]

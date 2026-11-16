@@ -1,1 +1,5 @@
-{ pkgs ? import <nixpkgs> {} }: pkgs.mkShell { packages = [(pkgs.python3.withPackages (p: [p.django p.pillow]))]; }
+{ pkgs ? import <nixpkgs> {} }:
+pkgs.mkShell {
+  packages = [ pkgs.python3 pkgs.zlib ];
+  LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [ pkgs.zlib ];
+}

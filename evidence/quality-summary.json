@@ -1,0 +1,33 @@
+{
+  "pages": 35,
+  "browserChecks": 175,
+  "browserFailures": 0,
+  "screenshots": 70,
+  "htmlPages": 35,
+  "htmlErrors": 0,
+  "cssErrors": 0,
+  "cssWarnings": 4,
+  "serverTests": 27,
+  "lighthouse": [
+    {
+      "page": "tours",
+      "performance": 100,
+      "accessibility": 100
+    },
+    {
+      "page": "booking_new",
+      "performance": 100,
+      "accessibility": 100
+    },
+    {
+      "page": "home",
+      "performance": 97,
+      "accessibility": 100
+    }
+  ],
+  "sourceHashes": {
+    "static/css/site.css": "049180e32ebc2e6d283318149d45135420460e555c594cbc3106c5c7b259da1b",
+    "static/js/site.js": "6145e549604214d22cd9551dc5f1892a62621278a703f3fd6b5492b473754dee",
+    "requirements.txt": "78aba49634fe64333f62b75eaff0cee8cfdb2534b48b681f39945b421af701bf"
+  }
+}

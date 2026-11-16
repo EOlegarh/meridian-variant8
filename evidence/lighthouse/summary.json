@@ -1,0 +1,23 @@
+[
+  {
+    "page": "tours",
+    "url": "http://127.0.0.1:8008/tours/",
+    "performance": 100,
+    "accessibility": 100,
+    "failedAudits": []
+  },
+  {
+    "page": "booking_new",
+    "url": "http://127.0.0.1:8008/bookings/new/1/",
+    "performance": 100,
+    "accessibility": 100,
+    "failedAudits": []
+  },
+  {
+    "page": "home",
+    "url": "http://127.0.0.1:8008/",
+    "performance": 97,
+    "accessibility": 100,
+    "failedAudits": []
+  }
+]
