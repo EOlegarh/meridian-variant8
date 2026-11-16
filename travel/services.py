@@ -67,3 +67,17 @@ def cancel(user,booking_id):
     if Booking.objects.filter(pk=b.pk,status='confirmed',paid=0).update(status='cancelled')!=1:raise ValidationError('Бронь уже изменена.')
     if Departure.objects.filter(pk=b.departure_id,reserved__gte=b.seats).update(reserved=F('reserved')-b.seats)!=1:raise ValidationError('Нарушен учёт мест.')
     b.status='cancelled';return b
+
+@transaction.atomic
+def update_booking(user,booking_id,tourists,service_ids=()):
+    b=Booking.objects.select_for_update().get(pk=booking_id)
+    if b.user_id!=user.pk:raise PermissionDenied
+    if b.paid or b.status!='confirmed':raise ValidationError('Изменение доступно до оплаты подтверждённой брони.')
+    d=Departure.objects.select_for_update().select_related('tour').get(pk=b.departure_id)
+    if d.start_date<=date.today():raise ValidationError('Заезд уже начался.')
+    result=quote(d,tourists,service_ids);delta=len(tourists)-b.seats
+    if Departure.objects.filter(pk=d.pk,reserved__lte=F('capacity')-delta,reserved__gte=-delta).update(reserved=F('reserved')+delta)!=1:raise ValidationError('На заезд недостаточно мест.')
+    b.tourists.all().delete();b.extras.all().delete()
+    BookingTourist.objects.bulk_create([BookingTourist(booking=b,**r) for r in result['tourists']])
+    BookingExtra.objects.bulk_create([BookingExtra(booking=b,**r) for r in result['extras']])
+    b.seats=len(tourists);b.total=result['total'];b.save(update_fields=['seats','total']);return b
