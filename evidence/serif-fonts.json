@@ -1,0 +1,17 @@
+[
+  {
+    "weight": 400,
+    "file": "noto-serif-400.woff2",
+    "bytes": 41740
+  },
+  {
+    "weight": 600,
+    "file": "noto-serif-600.woff2",
+    "bytes": 47048
+  },
+  {
+    "weight": 700,
+    "file": "noto-serif-700.woff2",
+    "bytes": 45616
+  }
+]
